@@ -108,6 +108,10 @@ func Quit() {
 	quitOnce.Do(quit)
 }
 
+func ClearItems() {
+	menuItems = make(map[int32]*MenuItem)
+}
+
 // AddMenuItem adds a menu item with the designated title and tooltip.
 //
 // It can be safely invoked from different goroutines.
